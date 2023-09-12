@@ -10,6 +10,11 @@ APP_NAME = "⚡ weatherology ⚡"
 WINDOW_DIMENSIONS = "400x400"
 DEFAULT_MODE = "dark"
 
+# colours
+RED = "#C63D2F"
+DARK_ORANGE = "#E25E3E"
+LIGHT_ORANGE = "#FFBB5C"
+
 
 # this class creates and updates the UI
 class Ctk:
@@ -25,15 +30,15 @@ class Ctk:
         # heading label
         self.heading_label = customtkinter.CTkLabel(master=self.window,
                                                     font=("courier", 24),
-                                                    text_color=("#C63D2F", "#FFBB5C"),
+                                                    text_color=(RED, LIGHT_ORANGE),
                                                     text=APP_NAME)
         self.heading_label.place(relx=0.5, rely=0.1, anchor=tkinter.CENTER)
 
         # button to change between light and dark mode
         self.mode_button = customtkinter.CTkButton(master=self.window,
                                                    width=45,
-                                                   fg_color="#E25E3E",
-                                                   hover_color="#C63D2F",
+                                                   fg_color=DARK_ORANGE,
+                                                   hover_color=RED,
                                                    text="mode",
                                                    command=self.change_mode)
 
@@ -52,8 +57,8 @@ class Ctk:
         # submit button
         submit_button = customtkinter.CTkButton(master=self.window,
                                                 width=100,
-                                                fg_color="#E25E3E",
-                                                hover_color="#C63D2F",
+                                                fg_color=DARK_ORANGE,
+                                                hover_color=RED,
                                                 text="submit",
                                                 command=self.search)
 
