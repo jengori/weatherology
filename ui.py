@@ -32,7 +32,7 @@ class Ctk:
                                                     font=("courier", 24),
                                                     text_color=(RED, LIGHT_ORANGE),
                                                     text=APP_NAME)
-        self.heading_label.place(relx=0.5, rely=0.1, anchor=tkinter.CENTER)
+        self.heading_label.place(relx=0.5, y=40, anchor=tkinter.CENTER)
 
         # button to change between light and dark mode
         self.mode_button = customtkinter.CTkButton(master=self.window,
@@ -42,16 +42,16 @@ class Ctk:
                                                    text="mode",
                                                    command=self.change_mode)
 
-        self.mode_button.place(relx=0.87,
-                               rely=0.05,
-                               anchor=customtkinter.W)
+        self.mode_button.place(relx=0.98,
+                               y=10,
+                               anchor=customtkinter.NE)
 
         # search field
         self.search_field = customtkinter.CTkEntry(self.window,
                                                    width=200,
                                                    placeholder_text="search for a city")
-        self.search_field.place(relx=0.1,
-                                rely=0.25,
+        self.search_field.place(x=30,
+                                y=100,
                                 anchor=tkinter.W)
 
         # submit button
@@ -62,8 +62,8 @@ class Ctk:
                                                 text="submit",
                                                 command=self.search)
 
-        submit_button.place(relx=0.65,
-                            rely=0.25,
+        submit_button.place(x=240,
+                            y=100,
                             anchor=customtkinter.W)
 
     # method to change between light and dark mode
@@ -103,8 +103,8 @@ class Ctk:
                                             width=400,
                                             text=f'{temp}{chr(176)}C',
                                             anchor=tkinter.W)
-        temp_label.place(relx=0.1,
-                         rely=0.7,
+        temp_label.place(x=35,
+                         y=280,
                          anchor=tkinter.W)
 
     # method to display weather icon
@@ -116,8 +116,8 @@ class Ctk:
                                                     width=200,
                                                     text="",
                                                     anchor=tkinter.W)
-        weather_icon_label.place(relx=0.5,
-                                 rely=0.7,
+        weather_icon_label.place(x=200,
+                                 y=280,
                                  anchor=tkinter.W)
 
     # display location label
@@ -126,10 +126,10 @@ class Ctk:
                                                 font=("", 24),
                                                 width=400,
                                                 text=loc_string,
-                                                anchor=tkinter.W)
-        location_label.place(relx=0.1,
-                             rely=0.5,
-                             anchor=tkinter.W)
+                                                anchor=tkinter.NW)
+        location_label.place(x=35,
+                             y=200,
+                             anchor=tkinter.NW)
 
     # display location not found message
     def show_message(self):
@@ -139,8 +139,8 @@ class Ctk:
                                                height=400,
                                                text="Location not found",
                                                anchor=tkinter.NW)
-        message_label.place(relx=0.1,
-                            rely=0.45,
+        message_label.place(x=35,
+                            y=200,
                             anchor=tkinter.NW)
 
 
